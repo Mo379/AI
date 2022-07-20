@@ -1,0 +1,17 @@
+version: "3.8"
+services: 
+  deepmind_jaxstk:
+    build: .
+    container_name: dm-jaxstk
+    tty: true
+    runtime: nvidia
+    command: /bin/bash
+    volumes:
+            - ./APP:/workspace/APP
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
