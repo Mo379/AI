@@ -19,6 +19,8 @@ bsuite
 graphviz
 torch 
 torchvision
+tensorflow
+tensorflow_datasets
 stable_baselines3
 pygame
 pymunk
